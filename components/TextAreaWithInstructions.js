@@ -1,20 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './TextAreaWithInstructions.module.css';
 
-const TextAreaWithInstructions = () => {
+const TextAreaWithInstructions = ({ onSubmit }) => {
+  const [input, setInput] = useState('');
+
+  const handleInputChange = (event) => {
+    setInput(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+    onSubmit(input); 
+    setInput(''); 
+  };
   return (
-    <div className={`d-flex flex-wrap ${styles.container}`}>
-      <div className={styles.leftColumn}>
-        <textarea className="form-control" rows="10" placeholder="Enter text here..."></textarea>
+    <form onSubmit={handleSubmit} className="d-flex flex-wrap">
+      <div className="left-column">
+        <textarea
+          className="form-control"
+          rows="10"
+          placeholder="Enter comma-separated numbers here..."
+          value={input}
+          onChange={handleInputChange}
+        ></textarea>
       </div>
-      <div className={styles.rightColumn}>
-        <div className={styles.instructions}>
-          Instructions...<br />
-          More text...<br />
-          And more...
+      <div className="right-column">
+        <div className="instructions">
+          Enter a list of numbers separated by commas.<br />
+          Example: 98980, 98981, 98982<br />
+          More instructions here...
         </div>
       </div>
-    </div>
+      <button type="submit" className="btn btn-primary mt-3">Submit</button>
+    </form>
   );
 };
 
