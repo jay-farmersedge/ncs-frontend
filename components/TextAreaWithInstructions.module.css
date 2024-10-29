@@ -3,15 +3,20 @@
   }
   
   .leftColumn textarea {
-    height: 220px;
+    height: 420px;
     border-radius: 10px;
-    border: 2px solid black;
+    width: 400px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 3px 10px 24px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 10px 24px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 10px 24px -10px rgba(0,0,0,0.75);
   }
   
   .rightColumn {
-    background-color: rgba(136, 136, 136, 0.8);
+    background-color: rgba(255, 108, 108, 0.8);
     padding: 10px;
     border-radius: 10px;
+    width: 250px;
   }
   
   .instructions {

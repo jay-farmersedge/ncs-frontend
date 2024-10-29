@@ -1,12 +1,31 @@
 .navbar {
-    background-color: rgba(68, 68, 68, 0.8);
+    background-color: rgba(255, 218, 5, 0.863);
     backdrop-filter: blur(10px);
+    padding: 5px 35px;
   }
+
+.feedback {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: rgba(85, 85, 85, 0.4);
+  border: 1px solid rgba(119, 119, 119, 0.7);
+  color: #ffffff;
+}
   
-  .feedback {
-    padding: 5px 10px;
-    border-radius: 4px;
-    background: rgba(85, 85, 85, 0.4);
-    border: 1px solid rgba(119, 119, 119, 0.7);
-  }
-  
+.menu {
+  display: flex;
+  justify-content: space-around; /* Adjusts space between items */
+  padding: 5px; /* Optional: Add padding to the menu *//* Optional: Background color */
+}
+
+.menu a {
+    text-decoration: none; /* Remove underline from links */
+    font-weight: 600;
+    color: #310101; /* Text color */
+    padding: 10px 15px; /* Optional: Padding around links */
+}
+
+.menu a:hover {
+    background-color: #00000042; /* Optional: Hover effect */
+    border-radius: 4px; /* Optional: Rounded corners on hover */
+}

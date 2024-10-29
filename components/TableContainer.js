@@ -12,7 +12,7 @@ const TableContainer = () => {
     <div>
       <div className={styles.resultContainer}>
         <span>Result</span>
-        <select className="form-select" onChange={handleDropdownChange}>
+        <select className="form-select ml-5" onChange={handleDropdownChange}>
           <option value="hide">-- Select --</option>
           <option value="show">Show Table</option>
         </select>

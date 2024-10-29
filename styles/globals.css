@@ -5,7 +5,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffffb9;
     --foreground: #ededed;
   }
 }
@@ -39,4 +39,9 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.custom-content-container {
+  min-height: 80vh; /* Adjust this value as needed */
+  gap: 20px; /* Adds even spacing between TextAreaWithInstructions and TableContainer */
 }
